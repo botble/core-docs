@@ -1,0 +1,17 @@
+## How to add new admin menu?
+
+- Open `/app/Providers/AppServiceProvider.php`. Add below code to function `boot`
+
+```php
+Event::listen(\Botble\Base\Events\SessionStarted::class, function () {
+    dashboard_menu()->registerItem([
+        'id' => 'your-unique-id', // key of menu, it should unique
+        'priority' => 5,
+        'parent_id' => null,
+        'name' => __('Your menu name'), // menu name, if you don't need translation, you can use the name in plain text
+        'icon' => 'fa fa-camera',
+        'url' => 'your-menu-url',
+        'permissions' => ['permission to access this menu'], // permission should same with route name and it's stored in `permissions` table.
+    ]);
+});
+```
