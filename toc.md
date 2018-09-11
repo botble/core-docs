@@ -7,10 +7,15 @@
 
 - Setup
     - [Installation](installation.md)
+    
+- Usage
+    - [Admin menu](admin_menu.md)
+    - [Layouts](layouts.md)
+    - [Dashboard widgets](dashboard_widgets.md)
+    - [Media](dashboard_widgets.md)
 
 - Core concept
     - [Filters](filters.md)
     - [Actions](actions.md)
     - [Meta box](meta_box.md)
     - [Mail](mail.md)
-    - [FAQ](faq.md)
