@@ -9,6 +9,7 @@
     - [Installation](installation.md)
     
 - Usage
+    - [Roles & permissions](role_permission.md)
     - [Admin menu](admin_menu.md)
     - [Layouts](layouts.md)
     - [Dashboard widgets](dashboard_widgets.md)
