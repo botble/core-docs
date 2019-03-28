@@ -12,7 +12,7 @@ This guide assumes that you already know how to [install](http://laravel.com/doc
 
 ### Step 1: Setup Botble Core as vendor package.
 
-Extract the files from the `core.zip` you have downloaded from CodeCanyon into a `core` folder in your project root.
+Extract the files from the `platform.zip` you have downloaded from CodeCanyon into a `platform` folder in your project root.
 
 Edit your `composer.json` file and add a [local path](https://getcomposer.org/doc/05-repositories.md#path) repository:
 
@@ -20,7 +20,7 @@ Edit your `composer.json` file and add a [local path](https://getcomposer.org/do
 "repositories": [
     {
         "type": "path",
-        "url": "./core"
+        "url": "./platform/core"
     }
 ]
 ```
@@ -28,7 +28,7 @@ Edit your `composer.json` file and add a [local path](https://getcomposer.org/do
 In your terminal run:
 
 ```bash
-composer require botble/media *@dev
+composer require botble/platform *@dev
 ```
 
 ### Step 2: Publish assets file
@@ -39,10 +39,22 @@ Publish the assets files with Laravel command:
 php artisan vendor:publish --tag=public --force
 ```
 
-### Step 3: Install Botble Core
+### Step 3: Install database
 
 ```bash
-php artisan cms:install
+php artisan migrate
+```
+
+### Step 4: Create a new super admin
+
+```bash
+php artisan cms:user:create
+```
+
+### Step 5: Create symlink
+
+```bash
+php artisan storage:link
 ```
 
 Now you can access to admin panel in `http://your-project-domain.local/admin`.
