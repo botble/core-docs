@@ -5,7 +5,7 @@
 ## Basic
 
 - When you got a new version of Botble Core from Codecanyon. You just need to do below steps to upgrade it.
-    * Extract `main.zip` and extract `core.zip` then override folder `core`.
+    * Extract `core.zip` and extract `platform.zip` then override folder `platform`.
     * Run `composer update` to update core.
     * Update assets: `php artisan vendor:publish --tag=public --force`
     * Update database
