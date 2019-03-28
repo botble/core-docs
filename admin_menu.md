@@ -6,7 +6,7 @@ To integrate your existed app with Botble Core, you will need to register your m
 - Open `/app/Providers/AppServiceProvider.php`. Add below code to function `boot`
 
 ```php
-\Event::listen(\Botble\Base\Events\SessionStarted::class, function () {
+\Event::listen(\Illuminate\Routing\Events\RouteMatched::class, function () {
     dashboard_menu()->registerItem([
         'id' => 'your-unique-id', // key of menu, it should unique
         'priority' => 5,
