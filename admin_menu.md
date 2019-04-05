@@ -11,7 +11,7 @@ To integrate your existed app with Botble Core, you will need to register your m
         'id' => 'your-unique-id', // key of menu, it should unique
         'priority' => 5,
         'parent_id' => null,
-        'name' => __('Your menu name'), // menu name, if you don't need translation, you can use the name in plain text
+        'name' => 'Your plugin name', // It should be a translation key. Ex: module.name
         'icon' => 'fa fa-camera',
         'url' => 'your-menu-url',
         'permissions' => ['permission to access this menu'], // permission should same with route name and it's stored in `permissions` table.
