@@ -13,53 +13,33 @@ add_filter(DASHBOARD_FILTER_ADMIN_LIST, [$this, 'registerDashboardWidgets'], 122
 - Add function callback to `/app/Providers/AppServiceProvider.php`. Add below code to function `boot`
 
 ```php
-public function registerDashboardWidgets($widgets, $widget_settings)
+public function registerDashboardWidgets($widgets, $widgetSettings)
 {
-    $widget = $widget_settings->where('name', 'widget_key_name')->first();
-    $widget_setting = $widget ? $widget->settings->first() : null;
+    $widget = new DashboardWidgetInstance;
 
-    if (!$widget) {
-        $widget = $this->app->make(\Botble\Dashboard\Repositories\Interfaces\DashboardWidgetInterface::class)->firstOrCreate(['name' => 'widget_key_name']);
-    }
+    $widget->permission = 'the permission key to check';
+    $widget->key = 'widget_your_widget_key';
+    $widget->title = __('Widget name');
+    $widget->icon = 'fas fa-history';
+    $widget->color = '#44b6ae';
+    $widget->route = route('the-route-to-get-data');
+    $widget->bodyClass = 'scroll-table';
+    $widget->column = 'col-md-6 col-sm-6';
 
-    $widget->title = 'Widget name here';
-    $widget->icon = 'fas fa-edit';
-    $widget->color = '#3598dc';
-
-    $data = 'string data here';
-
-    $widgets[] = [
-        'id' => $widget->id,
-        'view' => view('widgets.sample', compact('data', 'widget_setting'))->render(),
-    ];
-    return $widgets;
+    return $widget->init($widgets, $widgetSettings);
 }
 ```
 
-- Create view to display data: `resources/views/widgets/sample.blade.php`
+- Create a controller to return main content for your widget, the route name is added in above code (Ex: `the-route-to-get-data`).
 
 ```php
-@if (empty($widget_setting) || $widget_setting->status == 1)
-    This is widget content. Data: {{ $data }}
-@endif
-```
-
-- Example view for counter data.
-
-```php
-@if (empty($widget_setting) || $widget_setting->status == 1)
-    <div class="col-lg-3 col-md-3 col-sm-6 col-12">
-        <a class="dashboard-stat dashboard-stat-v2 blue" href="/">
-            <div class="visual">
-                <i class="fa fa-cogs"></i>
-            </div>
-            <div class="details">
-                <div class="number">
-                    <span data-counter="counterup" data-value="10">0</span>
-                </div>
-                <div class="desc"> Counter name </div>
-            </div>
-        </a>
-    </div>
-@endif
+public function getDataForWidget(Request $request, BaseHttpResponse $response)
+{
+    $content = 'The content can be a string or rendered from a blade view';
+    
+    // $content = view('plugins.your-plugin::widgets.sample', compact('data'))->render()
+    return $response
+        ->setError(false)
+        ->setData($content);
+}
 ```
