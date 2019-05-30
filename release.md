@@ -1,6 +1,22 @@
 # Changelog
 
-## 3.4 (28-03-2019)
+- [Botble Core 3.5](#version_3_5)
+- [Botble Core 3.4](#version_3_4)
+
+<a name="version_3_5"></a>
+## Botble Core 3.5
+### 30-05-2019
+- Restructure asset files.
+- Fix security issue in upload user's avatar.
+- Change binding type for repositories from `singleton` to `bind`.
+- Remove `@author` in comment docs.
+- Fix dashboard widgets.
+- Allow to create user without role.
+- Refactor, clean migrations.
+
+<a name="version_3_4"></a>
+## Botble Core 3.4
+### 28-03-2019
 - Upgraded to the latest Laravel version 5.8
 - Change folder structure: move folder /core into /platform folder.
 - Improve admin UI.
