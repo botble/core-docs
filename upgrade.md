@@ -1,6 +1,14 @@
 # Upgrade Guide
 
+- [Upgrade To 3.5](#upgrade-3.5)
 - [Basic](#basic)
+
+<a name="upgrade-3.5"></a>
+## Upgrade to 3.5
+- Override folder `platform` from the update source code.
+- Remove folder `public/vendor/core` and run command `php artisan vendor:publish --tag=cms-public --force`
+- Run `composer install` to update vendor packages.
+- Run `php artisan migrate` to update database.
 
 ## Basic
 
