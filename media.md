@@ -2,10 +2,28 @@
 
 Media in Botble Core is RvMedia, you can see the docs for it here: https://docs.botble.com/media
 
-### Media thumbnail sizes
-By default, all images will be auto cropped into 3 sizes
+### Change media image sizes
 
-If you want to modify or add more crop size. Add to function `boot` of `App\Providers\AppServiceProvider`
+#### Option 1: Override media config
+Copy `platform/core/media/config/media.php` to `config/media.php` and change the media sizes.
+
+```php
+<?php
+
+return [
+    ...
+    'sizes' => [
+        'thumb'    => '150x150',
+        'featured' => '560x380',
+        'medium'   => '540x360',
+    ],
+    ...
+];
+
+```
+
+#### Option 2: Using action.
+Add to function `boot` of `App\Providers\AppServiceProvider`
 
 ```php
 if (!function_exists('register_media_sizes')) {
