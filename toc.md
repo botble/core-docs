@@ -13,7 +13,7 @@
     - [Admin menu](admin_menu.md)
     - [Layouts](layouts.md)
     - [Dashboard widgets](dashboard_widgets.md)
-    - [Media](dashboard_widgets.md)
+    - [Media](media.md)
 
 - Core concept
     - [Filters](filters.md)
