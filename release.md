@@ -1,8 +1,17 @@
 # Changelog
 
+- [Botble 3.6.1](#version_3_6_1)
 - [Botble Core 3.6](#version_3_6)
 - [Botble Core 3.5](#version_3_5)
 - [Botble Core 3.4](#version_3_4)
+
+<a name="version_3_6_1"></a>
+## Botble 3.6.1
+### 10-08-2019
+
+- Fix bug search users.
+- Refactor code.
+- Improve performance.
 
 <a name="version_3_6"></a>
 ## Botble Core 3.6
