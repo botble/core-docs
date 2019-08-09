@@ -1,7 +1,16 @@
 # Changelog
 
+- [Botble Core 3.6](#version_3_6)
 - [Botble Core 3.5](#version_3_5)
 - [Botble Core 3.4](#version_3_4)
+
+<a name="version_3_6"></a>
+## Botble Core 3.6
+### 20-07-2019
+
+- Add command to regenerate image sizes: `php artisan cms:media:thumnail:generate`.
+- Update translations.
+- Optimize performance & refactor code.
 
 <a name="version_3_5"></a>
 ## Botble Core 3.5
