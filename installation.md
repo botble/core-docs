@@ -6,7 +6,7 @@
 
 ## Prerequisites
 
-This guide assumes that you already know how to [install](http://laravel.com/docs/5.5/installation) and configure Laravel and have the latest version of [Composer](https://getcomposer.org/) installed.
+This guide assumes that you already know how to [install](https://laravel.com/docs/5.5/installation) and configure Laravel and have the latest version of [Composer](https://getcomposer.org/) installed.
 
 ## Install Botble Core
 
