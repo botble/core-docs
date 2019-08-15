@@ -1,10 +1,6 @@
-## Media
+# Change media image sizes
 
-Media in Botble Core is RvMedia, you can see the docs for it here: https://docs.botble.com/media
-
-### Change media image sizes
-
-#### Option 1: Override media config
+## Option 1: Override media config
 Copy `platform/core/media/config/media.php` to `config/media.php` and change the media sizes.
 
 ```php
@@ -22,43 +18,68 @@ return [
 
 ```
 
-#### Option 2: Using action.
-Add to function `boot` of `App\Providers\AppServiceProvider`
+## Option 2: Modify it from your theme, media sizes will depend on your theme.
+Add to `platform/themes/your-theme/functions/functions.php` or in your plugin service providers.
 
 ```php
-if (!function_exists('register_media_sizes')) {
-    function register_media_sizes() {
+if (!function_exists('register_custom_image_size')) {
+    function register_custom_image_size()
+    {
         config([
-            'media.sizes.post-featured' => '200x150',
-            'media.sizes.other-size' => '400x400',
+            'media.sizes.post-small'   => '200x150',
+            'media.sizes.featured' => '360x217', // It will overrides default size for "medium"
+            // You can add more sizes if you want
         ]);
     }
 }
-
-add_action('init', 'register_media_sizes', 96);
+add_action('init', 'register_custom_image_size', 1234);
 ```
 
-### Create a button to choose image
+How to use:
 
-Your view have to extends from `core.base::layouts.master`
+```php
+    {{ get_image_url($post->image, 'post-small') }}
+    {{ get_object_image($post->image, 'post-small') }}
+```
 
-- Sample HTML:
+# Custom upload
 
-```html
-<input type="text" name="file" class="input-file">
-<a class="btn_gallery">Choose file</a>
+You can create your custom upload with `RvMedia` facade.
+
+Ex:
 
 ```
-- JS:
+\RvMedia::handleUpload(request()->input('file'), 0, 'your-folder`);
+```
 
-```javascript
-if (jQuery().rvMedia) {
-    $('.btn_gallery').rvMedia({
-        multiple: false,
-        onSelectFiles: function (files, $el) {
-            var firstItem = _.first(files);
-            $('.input-file').val(firstItem.url);
-        }
-    });
-}
+Or
+
+```
+rv_media_handle_upload(request()->input('file'), 0, 'your-folder`);
+```
+
+# Get image by size
+
+To get image by size, you can use `get_image_url($url, $size = null, $relative_path = false, $default = null)`.
+
+Ex:
+
+```
+get_image_url($post->image, 'thumb');
+```
+
+If you have registered other size, you can change `thumb` by your size's name.
+
+# Upload file from a path
+
+You can fake a file upload from a path with `UploadedFile` and upload it using `RvMedia::handleUpload()`
+
+Ex:
+```php
+$folder = \Botble\Media\Models\MediaFolder::create([
+    'name' => 'Example',
+    'slug' => 'example',
+]);
+$fileUpload = new \Illuminate\Http\UploadedFile(database_path('files/example.png'), 'example.png', 'image/png', null, true);
+$image = \RvMedia::handleUpload($fileUpload, $folder->id);
 ```

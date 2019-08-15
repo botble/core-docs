@@ -18,7 +18,7 @@ Flexible dashboard with widgets management. Easy to add and manage widgets.
 
 ![Image](https://botble.com/uploads/1/docs/screenshots/role-permission.png)
 
-### 5/ Setting
+### 5/ Settings
 General setting to manage website
 
 ![Image](https://botble.com/storage/uploads/docs/screenshots/settings.png)
