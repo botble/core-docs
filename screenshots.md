@@ -4,7 +4,7 @@
 
 Flexible dashboard with widgets management. Easy to add and manage widgets.
 
-![Image](https://botble.com/uploads/1/docs/screenshots/dashboard.png)
+![Image](https://botble.com/storage/uploads/1/docs/screenshots/dashboard.png)
 
 ### 2/ User management & CRUD with datatables
 
@@ -12,11 +12,11 @@ Flexible dashboard with widgets management. Easy to add and manage widgets.
 
 ### 3/ Media
 
-![Image](https://botble.com/uploads/1/docs/screenshots/media.png)
+![Image](https://botble.com/storage/uploads/1/docs/screenshots/media.png)
 
 ### 4/ Roles & Permissions
 
-![Image](https://botble.com/uploads/1/docs/screenshots/role-permission.png)
+![Image](https://botble.com/storage/uploads/1/docs/screenshots/role-permission.png)
 
 ### 5/ Settings
 General setting to manage website
