@@ -1,8 +1,65 @@
 # Upgrade Guide
 
+- [Upgrade To 4.0](#upgrade-4.0)
 - [Upgrade To 3.6](#upgrade-3.6)
 - [Upgrade To 3.5](#upgrade-3.5)
 - [Basic](#basic)
+
+<a name="upgrade-4.0"></a>
+## Upgrade to 4.0
+- Run `composer install` to install vendor packages
+- Run `php artisan migrate` to update database.
+- Change in `.env`: `FILESYSTEM_DRIVER=public`
+- Remove `/storage` from image URL in your database. Ex: change `/storage/uploads/abc.jpg` to `uploads/abc.jpg`
+- Update helper functions:
+Ex:
+```php
+// Before
+function get_meta_data($object->id, $key, $screen, $single = false, $select = ['meta_value'])
+
+// Now
+function get_meta_data($object, $key, $single = false, $select = ['meta_value'])
+```
+
+- Add setupModel method into your package forms. Ex: platform/packages/blog/src/Forms/PostForm.php:54
+```php
+$this->setupModel(new Post);
+```
+
+- Change screen's name to model class name in some functions: https://prnt.sc/pqyaiz
++ `Language::registerModule({PACKAGE}_MODULE_SCREEN_NAME);` to `Language::registerModule(\Botble\{Plugin}\Models\{Plugin}::class)`
++ `SeoHelper::registerModule({PACKAGE}_MODULE_SCREEN_NAME);` to `SeoHelper::registerModule(\Botble\{Plugin}\Models\{Plugin}::class)`
++ Change
+```php
+config([
+    'packages.slug.general.supported' => array_merge(config('packages.slug.general.supported'), [{PACKAGE}_MODULE_SCREEN_NAME]),
+]);
+```
+to
+
+```php
+SlugHelper::registerModule(\Botble\{Plugin}\Models\{Plugin}::class);
+```
+
+- Update your plugin's tables:
++ Change `apply_filters(BASE_FILTER_GET_LIST_DATA, $data, {PACKAGE}_MODULE_SCREEN_NAME)` to `apply_filters(BASE_FILTER_GET_LIST_DATA, $data, $this->repository->getModel())`
++ Change
+```php
+$this->applyScopes(apply_filters(BASE_FILTER_TABLE_QUERY, $query, $model, {PACKAGE}_MODULE_SCREEN_NAME));
+```
+to 
+```php
+$this->applyScopes(apply_filters(BASE_FILTER_TABLE_QUERY, $query, $model));
+```
+
++ Change
+```php
+apply_filters(BASE_FILTER_TABLE_BUTTONS, $buttons, {PACKAGE}_MODULE_SCREEN_NAME);
+```
+to
+```php
+apply_filters(BASE_FILTER_TABLE_BUTTONS, $buttons, Post::class);
+```
 
 <a name="upgrade-3.6"></a>
 ## Upgrade to 3.6

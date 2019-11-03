@@ -57,6 +57,9 @@ php artisan cms:user:create
 php artisan storage:link
 ```
 
+Note: If you can't run `php artisan storage:link` (some hosting doesn't support it), you can change config
+in `/config/filesystems.php` like this https://prnt.sc/pn50dc then move all uploaded file from `/storage/app/public` to `/public/storage`.
+
 Now you can access to admin panel in `http://your-project-domain.local/admin`.
 
 If you don't want `/admin` in the URL, please add to `.env`
