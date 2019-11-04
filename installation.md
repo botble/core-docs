@@ -36,7 +36,7 @@ composer require botble/platform *@dev
 Publish the assets files with Laravel command:
 
 ```bash
-php artisan vendor:publish --tag=public --force
+php artisan vendor:publish --tag=cms-public --force
 ```
 
 ### Step 3: Install database
