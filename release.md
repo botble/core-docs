@@ -1,10 +1,22 @@
 # Changelog
 
-- [Botble 4.0](#version_4_0)
+- [Botble Core 4.1](#version_4_1)
+- [Botble Core 4.0](#version_4_0)
 - [Botble 3.6.1](#version_3_6_1)
 - [Botble Core 3.6](#version_3_6)
 - [Botble Core 3.5](#version_3_5)
 - [Botble Core 3.4](#version_3_4)
+
+<a name="version_4_1"></a>
+## Botble 4.1
+### 01-12-2019
+
+- Improve media.
+- Change to use `laravel/tinker` 2.0
+- Fix UI
+- Fix mail variables
+- Fix cache issue in media.
+- Refactor code.
 
 <a name="version_4_0"></a>
 ## Botble 4.0

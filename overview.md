@@ -12,8 +12,6 @@ Currently, it's built as package and can work on Laravel >= 5.5
 
 Created: `2018-08-26`
 
-Current version: `4.0`
-
 By: [Botble Technologies](https://botble.com)
 
 Email: [sangnguyenplus@gmail.com](mailto:sangnguyenplus@gmail.com)
