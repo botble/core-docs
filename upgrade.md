@@ -1,10 +1,20 @@
 # Upgrade Guide
 
+- [Upgrade To 4.2](#upgrade-4.2)
 - [Upgrade To 4.1](#upgrade-4.1)
 - [Upgrade To 4.0](#upgrade-4.0)
 - [Upgrade To 3.6](#upgrade-3.6)
 - [Upgrade To 3.5](#upgrade-3.5)
 - [Basic](#basic)
+
+<a name="upgrade-4.2"></a>
+## Upgrade to 4.2
+
+- Override folder `app`, `platform` from the update source code.
+- Run `composer update` to install vendor packages
+- Run `php artisan migrate` to update database.
+- Remove folder `public/vendor/core` and run command `php artisan vendor:publish --tag=cms-public --force`
+- Remove all function `setModuleName()` in your packages (if you have).
 
 <a name="upgrade-4.1"></a>
 ## Upgrade to 4.1

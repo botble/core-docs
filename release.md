@@ -1,11 +1,25 @@
 # Changelog
 
+- [Botble Core 4.2](#version_4_2)
 - [Botble Core 4.1](#version_4_1)
 - [Botble Core 4.0](#version_4_0)
 - [Botble 3.6.1](#version_3_6_1)
 - [Botble Core 3.6](#version_3_6)
 - [Botble Core 3.5](#version_3_5)
 - [Botble Core 3.4](#version_3_4)
+
+<a name="version_4_2"></a>
+## Botble 4.2
+### 06-01-2020
+
+- Fix dev commands.
+- Fix error when creating new role.
+- Fix sort order in dashboard widgets.
+- Update country flags.
+- Update latest code from Laravel framework.
+- Deprecated function `setModuleName()` in forms.
+- Using package `mews/purifier` to prevent XSS attack.
+- Refactor code.
 
 <a name="version_4_1"></a>
 ## Botble 4.1
