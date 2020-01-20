@@ -1,5 +1,6 @@
 # Changelog
 
+- [Botble Core 5.0](#version_5_0)
 - [Botble Core 4.2](#version_4_2)
 - [Botble Core 4.1](#version_4_1)
 - [Botble Core 4.0](#version_4_0)
@@ -7,6 +8,13 @@
 - [Botble Core 3.6](#version_3_6)
 - [Botble Core 3.5](#version_3_5)
 - [Botble Core 3.4](#version_3_4)
+
+<a name="version_5_0"></a>
+### 2020-01-20
+- Change admin theme to make it more awesome.
+- Update ckeditor to allow to add image's caption.
+- Fix ACL module.
+- Add license.
 
 <a name="version_4_2"></a>
 ## Botble 4.2
