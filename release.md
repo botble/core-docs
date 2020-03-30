@@ -1,5 +1,6 @@
 # Changelog
 
+- [Botble Core 5.3](#version_5_3)
 - [Botble Core 5.2](#version_5_2)
 - [Botble Core 5.1](#version_5_1)
 - [Botble Core 5.0](#version_5_0)
@@ -10,6 +11,14 @@
 - [Botble Core 3.6](#version_3_6)
 - [Botble Core 3.5](#version_3_5)
 - [Botble Core 3.4](#version_3_4)
+
+<a name="version_5_3"></a>
+## Botble 5.3
+### 29-03-2020
+- Update to the latest Laravel version 7.3
+- Improve source code.
+- Update UI.
+- Refactor code.
 
 <a name="version_5_2"></a>
 ## Botble 5.2
