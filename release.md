@@ -1,5 +1,6 @@
 # Changelog
 
+- [Botble Core 5.4](#version_5_4)
 - [Botble Core 5.3](#version_5_3)
 - [Botble Core 5.2](#version_5_2)
 - [Botble Core 5.1](#version_5_1)
@@ -11,6 +12,14 @@
 - [Botble Core 3.6](#version_3_6)
 - [Botble Core 3.5](#version_3_5)
 - [Botble Core 3.4](#version_3_4)
+
+<a name="version_5_4"></a>
+## Botble 5.4
+### 01-05-2020
+- Refactor code & optimize performance.
+- Fix image's watermark.
+- Change default avatar, remove Gravatar as default avatar.
+- Remove package `davejamesmiller/laravel-breadcrumbs`, build own breadcrumbs.
 
 <a name="version_5_3"></a>
 ## Botble 5.3
