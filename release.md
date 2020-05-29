@@ -13,6 +13,19 @@
 - [Botble Core 3.5](#version_3_5)
 - [Botble Core 3.4](#version_3_4)
 
+<a name="version_5_5"></a>
+## Botble 5.5
+### 29-05-2020
+
+- Update to the latest Laravel version 7.13.
+- Improve media module: support upload chunk size.
+- Improve email system.
+- Update API package.
+- Move `js-validation` package to `core`.
+- Upgrade jQuery to v3.5.1 and Bootstrap 4.5.0.
+- Improve admin UI.
+- Refactor code.
+
 <a name="version_5_4"></a>
 ## Botble 5.4
 ### 01-05-2020
