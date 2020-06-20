@@ -3,10 +3,11 @@
     - [Screenshots](screenshots.md)
 - Prologue
     - [Release Notes](release.md)
-	- [Upgrade Guide](upgrade.md)
+    - [Upgrade Guide](upgrade.md)
 
 - Setup
     - [Installation](installation.md)
+    - [License](license.md)
     
 - Usage
     - [Roles & permissions](role_permission.md)
