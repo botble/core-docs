@@ -1,5 +1,7 @@
 # Changelog
 
+- [Botble Core 5.6](#version_5_6)
+- [Botble Core 5.5](#version_5_5)
 - [Botble Core 5.4](#version_5_4)
 - [Botble Core 5.3](#version_5_3)
 - [Botble Core 5.2](#version_5_2)
@@ -12,6 +14,15 @@
 - [Botble Core 3.6](#version_3_6)
 - [Botble Core 3.5](#version_3_5)
 - [Botble Core 3.4](#version_3_4)
+
+<a name="version_5_6"></a>
+## Botble 5.6
+### 03-07-2020
+
+- Update to the latest Laravel version 7.18.
+- Optimize database queries.
+- Improve admin UI.
+- Refactor code.
 
 <a name="version_5_5"></a>
 ## Botble 5.5

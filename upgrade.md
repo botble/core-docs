@@ -1,5 +1,6 @@
 # Upgrade Guide
 
+- [Upgrade To 5.6](#upgrade-5.6)
 - [Upgrade To 5.5](#upgrade-5.5)
 - [Upgrade To 5.4](#upgrade-5.4)
 - [Upgrade To 5.3](#upgrade-5.3)
@@ -12,6 +13,14 @@
 - [Upgrade To 3.6](#upgrade-3.6)
 - [Upgrade To 3.5](#upgrade-3.5)
 - [Basic](#basic)
+
+<a name="upgrade-5.6"></a>
+## Upgrade to 5.6
+
+- Override folder `app`, `config`, `platform` from the update source code.
+- Update `composer.json` then run `composer update` to install vendor packages
+- Run `php artisan migrate` to update database.
+- Remove folder `public/vendor/core` and run command `php artisan vendor:publish --tag=cms-public --force`
 
 <a name="upgrade-5.5"></a>
 ## Upgrade to 5.5
