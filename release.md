@@ -1,5 +1,6 @@
 # Changelog
 
+- [Botble Core 5.7](#version_5_7)
 - [Botble Core 5.6](#version_5_6)
 - [Botble Core 5.5](#version_5_5)
 - [Botble Core 5.4](#version_5_4)
@@ -15,10 +16,16 @@
 - [Botble Core 3.5](#version_3_5)
 - [Botble Core 3.4](#version_3_4)
 
-## Botble 5.6.1
-### 09-07-2020
-
-- Add support DigitalOcean Spaces
+## Botble 5.7
+### 05-08-2020
+- Upgrade to the latest Laravel framework version 7.22.
+- Deprecated some media functions: `is_image`, `get_image_url`, `get_object_image`, `rv_media_handle_upload`. 
+  Replacements: `RvMedia::isImage()`, `RvMedia::getImageUrl()`, `RvMedia::handleUpload()`.
+- Add support **Digital Ocean Spaces**.
+- Fix timezone, it doesn't work before.
+- Update email settings. Add support **SES**, **Postmark**, **Array**, **Log**.
+- Improve performance & refactor source code.
+- Improve license system, make it works better.
 
 <a name="version_5_6"></a>
 ## Botble 5.6
