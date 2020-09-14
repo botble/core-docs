@@ -1,5 +1,6 @@
 # Changelog
 
+- [Botble Core 5.8](#version_5_8)
 - [Botble Core 5.7](#version_5_7)
 - [Botble Core 5.6](#version_5_6)
 - [Botble Core 5.5](#version_5_5)
@@ -15,6 +16,20 @@
 - [Botble Core 3.6](#version_3_6)
 - [Botble Core 3.5](#version_3_5)
 - [Botble Core 3.4](#version_3_4)
+
+## Botble 5.8
+### 15-09-2020
+
+- Update to Laravel version 7.28
+- Add settings for watermark. Now, you can add watermark by changing setting in Admin -> Settings -> Media.
+- Add language settings. Allow to set default language in Admin -> Settings -> General.
+- Allow admin to login using email or username.
+- Optimize queries to make site loads faster.
+- Update UI.
+- Refactor code.
+- Fix webpack.mix.js config, issue with path on Windows.
+- Fix assets path.
+- Fix copy folder in Admin -> Media.
 
 ## Botble 5.7
 ### 05-08-2020
